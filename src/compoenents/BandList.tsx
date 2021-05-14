@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Bands } from '../types/types';
+import { BandsProps } from '../types/types';
 
-export const BandList = (props: { data: Bands[] }) => {
-  const [bands, setBands] = useState<Bands[]>(props.data);
+export const BandList = ({ data, vote }: BandsProps) => {
+  const [bands, setBands] = useState(data);
 
   useEffect(() => {
-    setBands(props.data);
-  }, [props.data]);
+    setBands(data);
+  }, [data]);
 
   const changeName = (event: React.ChangeEvent<HTMLInputElement>, id: string) => {
     const newName = event.target.value;
@@ -26,10 +26,13 @@ export const BandList = (props: { data: Bands[] }) => {
   };
 
   const createRows = () => {
-    return bands.map((band: Bands) => (
+    return bands.map((band) => (
       <tr key={band.id}>
         <td>
-          <button className='btn btn-primary'> +1</button>
+          <button className='btn btn-primary' onClick={() => vote(band.id)}>
+            {' '}
+            +1
+          </button>
         </td>
         <td>
           <input
@@ -49,6 +52,7 @@ export const BandList = (props: { data: Bands[] }) => {
       </tr>
     ));
   };
+
   return (
     <>
       <table className='table table-striped'>
