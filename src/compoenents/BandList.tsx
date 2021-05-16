@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BandsProps } from '../types/types';
 
-export const BandList = ({ data, vote }: BandsProps) => {
+export const BandList = ({ data, vote, deleteBand }: BandsProps) => {
   const [bands, setBands] = useState(data);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const BandList = ({ data, vote }: BandsProps) => {
           <h3>{band.votes}</h3>
         </td>
         <td>
-          <button className='btn btn-danger'>Delete</button>
+          <button className='btn btn-danger' onClick={() => deleteBand(band.id)}>Delete</button>
         </td>
       </tr>
     ));

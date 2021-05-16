@@ -7,4 +7,5 @@ export interface Bands {
 export interface BandsProps {
   data: Bands[];
   vote: Function;
+  deleteBand: Function;
 }
