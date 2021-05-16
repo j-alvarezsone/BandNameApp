@@ -10,3 +10,7 @@ export interface BandsProps {
   deleteBand: Function;
   changeBandName: Function;
 }
+
+export interface AddBandProps {
+  createBand: Function;
+}
