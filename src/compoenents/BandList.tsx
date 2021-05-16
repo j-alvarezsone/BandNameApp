@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BandsProps } from '../types/types';
 
-export const BandList = ({ data, vote, deleteBand }: BandsProps) => {
+export const BandList = ({ data, vote, deleteBand, changeBandName }: BandsProps) => {
   const [bands, setBands] = useState(data);
 
   useEffect(() => {
@@ -23,6 +23,8 @@ export const BandList = ({ data, vote, deleteBand }: BandsProps) => {
 
   const onLoseFocus = (id: string, name: string) => {
     console.log(id, name);
+
+    changeBandName(id, name);
   };
 
   const createRows = () => {
@@ -47,7 +49,9 @@ export const BandList = ({ data, vote, deleteBand }: BandsProps) => {
           <h3>{band.votes}</h3>
         </td>
         <td>
-          <button className='btn btn-danger' onClick={() => deleteBand(band.id)}>Delete</button>
+          <button className='btn btn-danger' onClick={() => deleteBand(band.id)}>
+            Delete
+          </button>
         </td>
       </tr>
     ));

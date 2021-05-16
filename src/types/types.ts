@@ -8,4 +8,5 @@ export interface BandsProps {
   data: Bands[];
   vote: Function;
   deleteBand: Function;
+  changeBandName: Function;
 }
