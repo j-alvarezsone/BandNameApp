@@ -4,17 +4,22 @@ export interface Bands {
   votes: number;
 }
 
-export interface BandsProps {
-  data: Bands[];
-  vote: Function;
-  deleteBand: Function;
-  changeBandName: Function;
-}
+// export interface BandsProps {
+//   data: Bands[];
+//   vote: Function;
+//   deleteBand: Function;
+//   changeBandName: Function;
+// }
 
-export interface AddBandProps {
-  createBand: Function;
-}
+// export interface AddBandProps {
+//   createBand: Function;
+// }
 
 export interface SocketContextProps {
   children: React.ReactNode;
+}
+
+export interface SocketContextType {
+  online: boolean;
+  socket: SocketIOClient.Socket;
 }
