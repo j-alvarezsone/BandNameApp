@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Band Names App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is CRUD app used socket.io and shared the data with chart.<br/>
+FrontEnd: React - TypeScript<br/>
+Backend: NodeJs
 
-## Available Scripts
+## Project Screen Shot(s)
 
-In the project directory, you can run:
+![Bandnames](https://user-images.githubusercontent.com/59021083/118501230-cbc21080-b728-11eb-90f2-58e5ea831903.png)
 
-### `yarn start`
+## Installation and Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To use, you need to clone(fork) down this repository and [backend](https://github.com/j-alvarezsone/socket-server-react). You will need node and npm installed globally on your machine.<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Frontend
 
-### `yarn test`
+Installation:<br/>
+`yarn install`<br/>
+To Start Server:<br/>
+`yarn start`<br/>
+To Visit App:<br/>
+`http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Installation:<br/>
+`npm install`<br/>
+To Start Server:<br/>
+`npm run dev`<br/>
+To Visit App:<br/>
+`http://localhost:8080`
