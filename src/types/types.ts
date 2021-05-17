@@ -14,3 +14,7 @@ export interface BandsProps {
 export interface AddBandProps {
   createBand: Function;
 }
+
+export interface SocketContextProps {
+  children: React.ReactNode;
+}
