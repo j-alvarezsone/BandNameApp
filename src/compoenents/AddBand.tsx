@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { AddBandProps } from '../types/types';
+import { useContext, useState } from 'react';
+import { SocketContext } from '../context/SocketContext';
 
-export const AddBand = ({ createBand }: AddBandProps) => {
+export const AddBand = () => {
   const [value, setValue] = useState('');
+  const { socket } = useContext(SocketContext);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (value.trim().length > 0) {
-      createBand(value);
+      socket!.emit('new-band', { name: value });
       setValue('');
     }
   };
